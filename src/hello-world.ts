@@ -9,7 +9,7 @@ function Person(name) {
 
     this.sayHi = function() {
         setTimeout(() => {
-            console.log("Hello my name is ", this.name);
+            console.log(`Hello my name is ${this.name}`);
         })
     }
 }
