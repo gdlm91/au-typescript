@@ -1,18 +1,12 @@
-const message = "Hello World!";
-
-const sayHello = message => console.log(message);
-
-sayHello(message);
-
-function Person(name) {
-    this.name = name;
-
-    this.sayHi = function() {
-        setTimeout(() => {
-            console.log(`Hello my name is ${this.name}`);
-        })
-    }
+function buildPersonData({firstName, lastName, address}) {
+    return `${firstName} ${lastName} ${address}`;
 }
 
-const person = new Person("Max");
-person.sayHi();
+const firstName = 'Kobe';
+const lastName = 'Bryant';
+const address = 'Staples Center';
+
+
+const personData = { firstName, lastName, address };
+
+console.log(buildPersonData(personData));
