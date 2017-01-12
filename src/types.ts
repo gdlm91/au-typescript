@@ -1,7 +1,17 @@
-let person: string[] = ['Kobe', 'Kareen', 'Shaq'];
+// 0-Guard, 1-Forward, 2-Center
 
-let counters: number[] = [0, 1, 2];
+enum PlayerPosition {
+    Guard, 
+    Forward,
+    Center
+}
 
-type Player = [string, number];
+type Player = [string, PlayerPosition];
 
-let player1: Player = ['Kobe', 5];
+let kobe: Player = ["Kobe", PlayerPosition.Guard];
+let james: Player = ["James", PlayerPosition.Forward];
+let shap: Player = ["Shap", PlayerPosition.Center];
+
+let players: Player[] = [kobe, james, shap];
+
+console.log(players);
