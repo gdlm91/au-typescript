@@ -7,6 +7,12 @@
     </head>
     <body>
     
-    <script src="src/hello-world.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.41/system.js"></script>
+    <script>
+        System.config({
+            defaultJSExtensions: true
+        })
+        System.import('/src/app');
+    </script>
     </body>
 </html>

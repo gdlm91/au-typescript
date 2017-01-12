@@ -1,6 +1,4 @@
-function buildPersonData({firstName, lastName}, ...address) {
-    return `${firstName} ${lastName} ${address}`;
-}
+import { buildPersonData } from './buildPersonData';
 
 const firstName = 'Kobe';
 const lastName = 'Bryant';

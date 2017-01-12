@@ -4,10 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc src/hello-world.ts",
-    "build:watch": "tsc -w src/hello-world.ts",
-    "server": "lite-server",
-    "start": "concurrently --kill-others \"npm run build:watch\" \"npm run server\""
+    "es6": "concurrently --kill-others \"tsc -w src/\" \"lite-server\""
   },
   "repository": {
     "type": "git",
