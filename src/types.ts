@@ -1,7 +1,18 @@
-import { _ } from 'lodash';
+function buildMessage(message:string) :never {
+    throw new Error("Message not available");
+}
 
-const colors = ["Red", "Greem", "Blue"];
+let message: never = buildMessage("Hello World");
 
-const firstColor = _.first(colors);
+let counter:number = message; //YEs
 
-console.log(firstColor);
+let str:string = "String"; //YES
+
+let myAny:any = "Any";
+
+message = str; //NO
+message = myAny;
+
+function voidFunction(message:string) :void {
+    alert("Message not available");
+}
