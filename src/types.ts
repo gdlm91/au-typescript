@@ -1,9 +1,7 @@
-type MessageCreator = (name:string) => string;
+let person: string[] = ['Kobe', 'Kareen', 'Shaq'];
 
-function createHelloMessage(name) {
-    return `Hello, my name is ${name}`;
-}
+let counters: number[] = [0, 1, 2];
 
-const creator: MessageCreator = createHelloMessage;
+type Player = [string, number];
 
-console.log(creator('Bill'));
+let player1: Player = ['Kobe', 5];
