@@ -1,23 +1,33 @@
-// 0-Guard, 1-Forward, 2-Center
-
-//For not nullable option, check tsconfig.json
-
-enum PlayerPosition {
-    Guard, 
-    Forward,
-    Center
+// Interfaces to Define Properties for Objects
+interface HasName {
+    firstName: string,
+    lastName: string
+}
+interface HasAddress {
+    address: string
 }
 
-interface Player {
-    name:string; 
-    position:PlayerPosition
-};
+// Types for Aliases/Unions
+type Player = (HasName & HasAddress) | null;
 
-let kobe: Player | null = { // Multiple valid Types
-    name: "Kobe", 
-    position: PlayerPosition.Guard
-};
+const player1: Player = {
+    firstName: "Magic",
+    lastName: "Johnson",
+    address: "Staples"
+}
 
-kobe = null;
+const player2: Player = null;
 
-kobe = undefined;
+let myVar: any;
+let counter: number = 0;
+
+function anyFunction(anyvar) { //Implicit Any Assing. (Go to tsconfig for configuration)
+
+}
+
+myVar = '';
+myVar = 1;
+myVar = [];
+myVar = null;
+
+counter = myVar; // Can assing any to other types!!!

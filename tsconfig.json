@@ -4,6 +4,7 @@
         "target": "ES5",
         "outDir": "dist",
         "rootDir": "src",
-        "strictNullChecks": true
+        "strictNullChecks": true,
+        "noImplicitAny": true
     }
 }
