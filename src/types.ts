@@ -1,17 +1,23 @@
 // 0-Guard, 1-Forward, 2-Center
 
+//For not nullable option, check tsconfig.json
+
 enum PlayerPosition {
     Guard, 
     Forward,
     Center
 }
 
-type Player = [string, PlayerPosition];
+interface Player {
+    name:string; 
+    position:PlayerPosition
+};
 
-let kobe: Player = ["Kobe", PlayerPosition.Guard];
-let james: Player = ["James", PlayerPosition.Forward];
-let shap: Player = ["Shap", PlayerPosition.Center];
+let kobe: Player | null = { // Multiple valid Types
+    name: "Kobe", 
+    position: PlayerPosition.Guard
+};
 
-let players: Player[] = [kobe, james, shap];
+kobe = null;
 
-console.log(players);
+kobe = undefined;
