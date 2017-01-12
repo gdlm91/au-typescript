@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "es6": "concurrently --kill-others \"tsc -w src/\" \"lite-server\""
+    "build:watch": "tsc -w",
+    "es6": "concurrently --kill-others \"tsc -w\" \"lite-server\"",
+    "types": "node dist/types.js"
   },
   "repository": {
     "type": "git",
