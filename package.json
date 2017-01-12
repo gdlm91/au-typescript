@@ -20,12 +20,12 @@
   },
   "homepage": "https://github.com/gdlm91/au-typescript#readme",
   "devDependencies": {
+    "@types/node": "^7.0.0",
     "concurrently": "^3.1.0",
     "lite-server": "^2.2.2",
     "typescript": "^2.1.4"
   },
   "dependencies": {
-    "@types/lodash": "^4.14.48",
     "lodash": "^4.17.4"
   }
 }
