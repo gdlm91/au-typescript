@@ -1,41 +1,9 @@
-console.log('Types');
+type MessageCreator = (name:string) => string;
 
-let message:string = "Message";
-
-let count:number = 3;
-
-let messageRed:boolean =true;
-
-type hasName = {
-    firstName?:string, //Conditional
-    lastName:string
+function createHelloMessage(name) {
+    return `Hello, my name is ${name}`;
 }
 
-type hasAddress = {
-    streetName:string
-}
+const creator: MessageCreator = createHelloMessage;
 
-type Person = {
-    name: hasName,
-    address: hasAddress
-}
-
-let person: hasName = {
-    firstName: "Kobe",
-    lastName: "Bryant"
-}
-
-person.address = ''; //Property not Defined error
-
-let person2: hasName = {
-    lastName: "Smith";
-}
-
-let person3: Person = {
-    name: {
-        lastName: "Miller"
-    },
-    address: {
-        streetName: "Streen Name"
-    }
-}
+console.log(creator('Bill'));
