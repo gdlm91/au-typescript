@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "ts-node src/server/server.ts",
+    "watch": "nodemon -w . --ext \".ts\" --exec \"npm run start\" ",
     "build:watch": "tsc -w",
     "es6": "concurrently --kill-others \"tsc -w\" \"lite-server\"",
     "types": "node dist/types.js"
@@ -20,12 +22,19 @@
   },
   "homepage": "https://github.com/gdlm91/au-typescript#readme",
   "devDependencies": {
+    "@types/express": "^4.0.34",
     "@types/node": "^7.0.0",
+    "@types/sequelize": "^4.0.39",
     "concurrently": "^3.1.0",
     "lite-server": "^2.2.2",
+    "nodemon": "^1.11.0",
+    "ts-node": "^2.0.0",
     "typescript": "^2.1.4"
   },
   "dependencies": {
-    "lodash": "^4.17.4"
+    "express": "^4.14.0",
+    "lodash": "^4.17.4",
+    "pg": "^6.1.2",
+    "sequelize": "^3.29.0"
   }
 }
