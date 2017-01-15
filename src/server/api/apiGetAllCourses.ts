@@ -4,7 +4,6 @@ import { onError } from "./onError";
 
 export function apiGetAllCourses(req: Request, res: Response) {
     findAllCourses()
-        .then(() => { throw new Error('Error') })
         .then(results => {
             res.status(200).json({ results });
         })
