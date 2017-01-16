@@ -1,8 +1,12 @@
 import * as express from "express";
+import * as bodyParser from "body-parser";
+
 import { initRestApi } from "./api/api";
 import { apiErrorHandler } from "./api/apiErrorHandler";
 
 const app = express();
+
+app.use(bodyParser.json());
 
 initRestApi(app);
 
