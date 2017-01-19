@@ -3,7 +3,15 @@ enum Editor {
     DC
 }
 
-abstract class SuperHero {
+interface CanFly {
+    fly(message: string): void;
+}
+
+interface Hero {
+    name: string;
+}
+
+abstract class SuperHero implements Hero {
 
     private static readonly LABEL = 'Super Hero:';
 
@@ -20,11 +28,11 @@ abstract class SuperHero {
     }
 }
 
-class FlyingHero extends SuperHero {
+class FlyingHero extends SuperHero implements CanFly{    
     fly(message: string) {
         console.log(`${this.name} is Flying and said: ${message}`);
     }
-    
+
     createMessage() {
         return `Super Hero: ${this.name} ${this.editor}, ${this.createYear}`;
     }
@@ -46,3 +54,7 @@ console.log(superman.createMessage());
 const greenLantern = new FlyingHero("Green Lantern", Editor.DC, 1959);
 console.log(greenLantern.createMessage());
 console.log(SuperHero.sayHi(greenLantern));
+
+const batman: Hero = {
+    name: "Batman"
+}

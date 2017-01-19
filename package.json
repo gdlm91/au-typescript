@@ -8,7 +8,8 @@
     "watch": "nodemon -w . --ext \".ts\" --exec \"npm run start\" ",
     "es6": "concurrently --kill-others \"tsc -w\" \"lite-server\"",
     "types": "node dist/types.js",
-    "oop": "ts-node src/oop.ts"
+    "oop": "ts-node src/oop.ts",
+    "generics": "ts-node src/generics.ts"
   },
   "repository": {
     "type": "git",
