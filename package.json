@@ -6,9 +6,9 @@
   "scripts": {
     "start": "ts-node src/server/server.ts",
     "watch": "nodemon -w . --ext \".ts\" --exec \"npm run start\" ",
-    "build:watch": "tsc -w",
     "es6": "concurrently --kill-others \"tsc -w\" \"lite-server\"",
-    "types": "node dist/types.js"
+    "types": "node dist/types.js",
+    "oop": "ts-node src/oop.ts"
   },
   "repository": {
     "type": "git",
